@@ -18,7 +18,6 @@ cursor:none;
      /* light background */
     backdrop-filter: blur(5px); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-filter: blur(1);
   }
   
   .magnetic-link::before {
