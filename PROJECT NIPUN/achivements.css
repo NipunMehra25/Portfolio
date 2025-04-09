@@ -183,14 +183,6 @@ body {
     animation: none; 
 }
 
-.scene:hover .front  { transform: translateX(-42vw); }
-.scene:hover .back   { transform: translateX(-27vw); }
-.scene:hover .left   { transform: translateX(-12vw); }
-.scene:hover .right  { transform: translateX(3vw); }
-.scene:hover .top    { transform: translateX(18vw); }
-.scene:hover .bottom { transform: translateX(33vw); }
-
-
 
 /* Cube Animation */
 @keyframes rotate {
