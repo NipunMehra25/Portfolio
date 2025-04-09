@@ -1,13 +1,62 @@
 *{
     padding:0%;
     margin: 0%;
-    cursor: url("starter-northern-lights-cursor-modified.png"),auto;
+    cursor: none;
 }
 
-* a{
     cursor: url("starter-northern-lights-pointer.png"),auto;
 }
 
+  
+  .magnetic-link:hover::before {
+    transform: scale(1);
+    opacity: 1;
+    background:#613498;
+
+  }
+  
+  
+  .magnetic-link span {
+    position: relative;
+    z-index: 2;
+    color: black; /* make sure text stays dark */
+  }
+  
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #111; /* or your custom dark background */
+    color: #fff;
+  }
+  
+  
+.cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: black;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+  }
+  
+  .cursor-trail {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: background 0.3s ease;
+  }
+  
 html,body{
     height: 100%;
     width: 100%;
@@ -145,14 +194,20 @@ video {
     align-items: center;
     justify-content: center;
     font-family: fonts;
+    background:black;
+    border-radius: 17px;
+    border-color: white;
+    stroke: #fff;
+    border-bottom: 2px solid #ffffff33;
 }
 
 .navbar a {
     position: relative; 
     text-decoration: none;
     padding: 20px;
-    font-size: 32px;
+    font-size: 30px;
     color: #ffffff;
+    z-index:1;
 }
 
 .navbar a::after {
@@ -172,11 +227,6 @@ video {
     left: 0;
     right: 0;
 }
-
-.navbar a:hover {
-    color: rgba(111,30,224,1);
-}
-
 .name{
     position: absolute;
     color: #ffffff;
