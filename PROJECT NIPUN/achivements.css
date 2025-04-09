@@ -144,7 +144,16 @@ body {
     
 }
 
-
+  .scene.expanded .front  { transform: translateX(-42vw) translateY(0); }
+  .scene.expanded .back   { transform: translateX(-27vw) translateY(0); }
+  .scene.expanded .left   { transform: translateX(-12vw) translateY(0); }
+  .scene.expanded .right  { transform: translateX(3vw) translateY(0); }
+  .scene.expanded .top    { transform: translateX(18vw) translateY(0); }
+  .scene.expanded .bottom { transform: translateX(33vw) translateY(0); }
+  
+  .scene.expanded .move {
+    transform: scale(1.3) translateY(25vh) translateX(-4vw);
+  }
 
 
 
