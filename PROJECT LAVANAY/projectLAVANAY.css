@@ -391,3 +391,4 @@ video {
 }
 
 .project1, .project2 {
+    transition: background 0.6s ease, color 1s ease; /* include background here */
