@@ -392,3 +392,9 @@ video {
 
 .project1, .project2 {
     transition: background 0.6s ease, color 1s ease; /* include background here */
+}
+
+.project1:hover, .project2:hover {
+    background: black; /* Or whatever hover color you want */
+    color: rgb(159, 151, 151); /* keep the text color change */
+}
