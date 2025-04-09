@@ -1,0 +1,431 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+cursor:none;
+}
+
+.magnetic-link {
+    position: relative;
+    display: inline-block;
+    padding: 14px 28px;
+    font-weight: 600;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    z-index: 1;
+    color: black; /* dark text */
+     /* light background */
+    backdrop-filter: blur(5px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .magnetic-link::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #3b1c66; /* ← darker solid purple */
+    border-radius: 12px;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: -1;
+}
+
+  
+  .magnetic-link:hover::before {
+    transform: scale(1);
+    opacity: 1;
+    background:#613498;
+  }
+  
+  
+  .magnetic-link span {
+    position: relative;
+    z-index: 2;
+    color: black; /* make sure text stays dark */
+  }
+  
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #111; /* or your custom dark background */
+    color: #fff;
+  }
+  
+  
+.cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: black;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+  }
+  
+  .cursor-trail {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: background 0.3s ease;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    cursor: none; /* Hide default cursor */
+    font-family: sans-serif;
+  }
+
+  body {
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    overflow: hidden;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: #222;
+  }
+
+  .content h1 {
+    font-size: 3rem;
+    max-width: 600px;
+  }
+
+  
+
+ 
+
+  
+
+
+
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    background-color: rgba(22, 19, 26, 0.7);
+    /* Background color */
+    border: 2px solid #532196;
+    /* Border color */
+    border-radius: 32px;
+    /* Rounded corners */
+    padding: 3vh 2vw;
+    /* Padding */
+    text-decoration: none;
+    /* Remove underline */
+    color: rgb(230, 224, 224);
+    /* Text color */
+    font-size: 20px;
+    /* Font size */
+    transition: background-color 0.3s ease;
+    /* Smooth background transition */
+    /* animation: bounce 1s infinite; Animation */
+    position: relative;
+    top: 82vh;
+    left: 85vw;
+    font-family: fonts;
+}
+
+.back-button-container {
+    margin-right: 140px;
+    /* Push the back button to the left */
+}
+
+/* Back button hover effect */
+.back-button:hover {
+    background-color: #613498;
+    /* Light purple on hover */
+}
+
+
+body{
+    display:flex;width:100vw;height:100vh;justify-content:center;align-items: center;background-size: cover;
+    background:url(standard\ \(2\).gif);
+}
+.video-background {
+    position: fixed; 
+    top: -10vh;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    z-index: -1;
+    overflow: hidden;
+}
+
+video {
+    top: -5vh;
+    position: absolute;
+    width: 100vw; 
+    height: 110vh; 
+    object-fit: cover; 
+    z-index: -1;
+}
+    
+@font-face{
+    font-family: myfont;
+    src: url(EdsMarketRegularSlant.ttf);
+}
+
+@font-face{
+    font-family: fonts;
+    src: url(Hacked-KerX.ttf);
+}
+
+@font-face{
+    font-family: fonts1;
+    src: url(PastiOblique-7B0wK.otf);
+}
+
+@font-face{
+    font-family: fonts2;
+    src: url(FunkyCoffee-E4XYg.otf);
+}
+
+.fonts{font-family: fonts1;}
+.me,.skill{
+    font-family: fonts2;
+}
+
+.content{
+    height: 100%;
+    width: 100%;
+    animation: blurEffect 2s linear;
+}
+
+.navbar{
+    display: flex;
+    position: fixed;
+    top: 4%;
+    left: 45%;
+    width: 50%;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+    font-family: fonts;
+    background:black;
+    border-radius: 17px;
+    border-color: white;
+    stroke: #fff;
+    /* border: 4px solid #ffffff33; */
+    border-bottom: 4px solid #ffffff33;
+}
+
+.navbar a {
+    position: relative; 
+    text-decoration: none;
+    padding: 20px;
+    font-size: 30px;
+    color: #ffffff;
+    z-index:1;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    display: block;
+    margin-top: 8px;
+    right: 0;
+    background: linear-gradient(90deg, rgba(111,30,224,1) 11%, rgba(155,124,181,1) 94%);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+
+
+.name{
+    position: absolute;
+    color: #ffffff;
+    top: 40px;
+    left: 80px;
+    font-size: 40px;
+    font-family: myfont;
+}
+
+/* Body Styling */
+body {
+    height: 100vh;
+    display: flex;
+    perspective: 900px;
+    background-color: black;
+    overflow: hidden; 
+}
+
+@keyframes blurEffect {
+    
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes zoom{
+    0%{
+        opacity: 0;
+    }
+    33%{
+        opacity: 1;
+        color:white;
+    }
+    66%{
+        opacity: 1;
+        color: #ffffff;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes wait_for {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        
+    }
+}
+
+.about{
+    position: absolute;
+    top: 47%;
+    left: 33%;
+    font-size: 8vh;
+    color:transparent;
+    animation-delay: 2.5s;
+    animation: zoom 3s ease-in-out 2.5s forwards;
+}
+
+.what{
+    position: absolute;
+    top: 47%;
+    left: 15%;
+    font-size: 8vh;
+    color:transparent;
+    animation-delay: 2.5s;
+    animation: zoom 3s ease-in-out 6s forwards;
+}
+
+.me{
+    opacity: 0;
+    position: absolute;
+    top: 20%;
+    left: 6%;
+    color: #ffffff;
+    animation: wait_for 1s ease-in-out 10s forwards;
+}
+
+#ME {
+    opacity: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 27%;
+    color: #ffffff;
+    left: 6%;
+    right: 4%;
+    animation: wait_for 2s ease-in-out 10s forwards;
+    font-size:140%;
+}
+
+.skill{
+    font-size: xx-large;
+    opacity: 0;
+    position: absolute;
+    top: 48%;
+    left: 6%;
+    color: #ffffff;
+    animation: wait_for 2s ease-in-out 10s forwards;
+}
+
+.card{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    width: 16vw;
+    height: 33vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 1s ease; 
+    opacity: 0;
+    animation: wait_for 2s ease-in-out 10s forwards;
+    transition: transform 0.2s ease;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card1 {
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    background:url("python-png.png"); /* Solid gradient below */
+    background-size: cover; 
+    background-position: center; 
+    width: 12vw;
+    height: 21vh;
+}
+
+.card2 { 
+    top: 58%; 
+    left: 29%;
+    background:url("Untitled\ design.png"); /* Solid gradient below */
+    background-size: cover; 
+    background-size: cover;
+    background-position: center; 
+    width: 13vw;
+    height: 27vh;
+}
+
+.card3 {
+    top: 58%; 
+    left: 53%; 
+    background:url("Untitled\ design\ \(1\).png"); /* Solid gradient below */
+    background-size: cover; 
+    background-position: center;
+    width: 13vw;
+    height: 27vh;
+}
+.card4 { 
+    top: 55%; 
+    left: 75%;
+    background:url("javascript-logo.png"); /* Solid gradient below */
+    background-size: cover; 
+    background-position: center; 
+    width: 11vw;
+    height: 21vh;
+}
