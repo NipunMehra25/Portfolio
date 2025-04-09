@@ -145,43 +145,7 @@ body {
 }
 
 
- /* Hover Effect for face1 */
-#face1:hover {
-    transform: scale(1.3) translateX(0px) translateY(25vh); 
-}
 
-#face2:hover {
-    transform: scale(1.3) translateX(0px) translateY(25vh); 
-}
-
-#face3:hover {
-    transform: scale(1.3) translateX(0px) translateY(25vh); 
-}
-
-#face4:hover {
-    transform: scale(1.3) translateX(0px) translateY(25vh); 
-}
-
-#face5:hover {
-    transform: scale(1.3) translateX(0px) translateY(25vh); 
-}
-
-#face6:hover {
-    transform: scale(1.3) translateX(0px) translateY(25vh); 
-} 
-
-/* Cube Faces Positioning */
-.front  { transform: rotateY(  0deg) translateZ(85px); background: linear-gradient(#00b3ff,#00fff7); } 
-.back   { transform: rotateY(180deg) translateZ(85px); background: linear-gradient(#00b3ff,#00fff7); } 
-.left   { transform: rotateY(-90deg) translateZ(85px); background: linear-gradient(#00b3ff,#00fff7); } 
-.right  { transform: rotateY(90deg) translateZ(85px); background: linear-gradient(#00b3ff,#00fff7); } 
-.top    { transform: rotateX(90deg) translateZ(85px); background: linear-gradient(#00b3ff,#00fff7); } 
-.bottom { transform: rotateX(-90deg) translateZ(85px); background: linear-gradient(#00b3ff,#00fff7); } 
-
-/* Hover Effect */
-.scene:hover {
-    animation: none; 
-}
 
 
 /* Cube Animation */
