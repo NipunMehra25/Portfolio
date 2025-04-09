@@ -42,23 +42,45 @@
     Click on the cube to open.
     </div>
 
-    <script>
-        const scene = document.getElementById("scene");
-        const cube = document.getElementById("cube");
-        const faces = document.querySelectorAll(".face");
-        let lastMovedFace = null;
-    
-        cube.addEventListener("click", function(event) {
-          event.stopPropagation();
-          if (!scene.classList.contains("expanded")) {
-            scene.classList.add("expanded");
-            scene.style.animation = "none"; // ✅ Stop rotation animation on .scene
-            faces.forEach(face => face.classList.remove("move"));
-            faces.forEach(face => face.addEventListener("click", moveFace));
-          }
-        });
-    </script>
+  <script>
+    const scene = document.getElementById("scene");
+    const cube = document.getElementById("cube");
+    const faces = document.querySelectorAll(".face");
+    let lastMovedFace = null;
 
+    cube.addEventListener("click", function(event) {
+      event.stopPropagation();
+      if (!scene.classList.contains("expanded")) {
+        scene.classList.add("expanded");
+        scene.style.animation = "none"; // ✅ Stop rotation animation on .scene
+        faces.forEach(face => face.classList.remove("move"));
+        faces.forEach(face => face.addEventListener("click", moveFace));
+      }
+    });
+
+    function moveFace(event) {
+      event.stopPropagation();
+      if (scene.classList.contains("expanded")) {
+        if (lastMovedFace && lastMovedFace !== this) {
+          lastMovedFace.classList.remove("move");
+        }
+        this.classList.add("move");
+        lastMovedFace = this;
+      }
+    }
+
+    document.addEventListener("click", function() {
+      if (scene.classList.contains("expanded")) {
+        scene.classList.remove("expanded");
+        scene.style.animation = "rotate 5s infinite linear"; // ✅ Resume rotation
+        faces.forEach(face => {
+          face.classList.remove("move");
+          face.removeEventListener("click", moveFace);
+        });
+        lastMovedFace = null;
+      }
+    });
+  </script>
 
 </body>
 </html>
