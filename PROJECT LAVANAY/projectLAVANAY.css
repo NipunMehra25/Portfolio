@@ -29,6 +29,7 @@
     background: #3b1c66; /* ← darker solid purple */
     border-radius: 12px;
     transform: scale(0.9);
+    opacity: 0;
 }
 
   
