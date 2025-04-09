@@ -42,5 +42,23 @@
     Click on the cube to open.
     </div>
 
+    <script>
+        const scene = document.getElementById("scene");
+        const cube = document.getElementById("cube");
+        const faces = document.querySelectorAll(".face");
+        let lastMovedFace = null;
+    
+        cube.addEventListener("click", function(event) {
+          event.stopPropagation();
+          if (!scene.classList.contains("expanded")) {
+            scene.classList.add("expanded");
+            scene.style.animation = "none"; // ✅ Stop rotation animation on .scene
+            faces.forEach(face => face.classList.remove("move"));
+            faces.forEach(face => face.addEventListener("click", moveFace));
+          }
+        });
+    </script>
+
+
 </body>
 </html>
