@@ -144,6 +144,14 @@ body {
     
 }
 
+
+  .front  { transform: rotateY(  0deg) translateZ(85px); background: linear-gradient(#00b3ff,#00fff7); }
+  .back   { transform: rotateY(180deg) translateZ(85px); background: linear-gradient(#00b3ff,#00fff7); }
+  .left   { transform: rotateY(-90deg) translateZ(85px); background: linear-gradient(#00b3ff,#00fff7); }
+  .right  { transform: rotateY(90deg) translateZ(85px); background: linear-gradient(#00b3ff,#00fff7); }
+  .top    { transform: rotateX(90deg) translateZ(85px); background: linear-gradient(#00b3ff,#00fff7); }
+  .bottom { transform: rotateX(-90deg) translateZ(85px); background: linear-gradient(#00b3ff,#00fff7); }
+
   .scene.expanded .front  { transform: translateX(-42vw) translateY(0); }
   .scene.expanded .back   { transform: translateX(-27vw) translateY(0); }
   .scene.expanded .left   { transform: translateX(-12vw) translateY(0); }
