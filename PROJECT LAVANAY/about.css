@@ -39,6 +39,7 @@ cursor:none;
     opacity: 1;
     background:#613498;
     font-family: 'Courier New', Courier, monospace;
+    font: optional;
   }
   
   
