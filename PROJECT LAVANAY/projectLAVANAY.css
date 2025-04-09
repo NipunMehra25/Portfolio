@@ -23,6 +23,7 @@
   
   .magnetic-link::before {
     content: "";
+    position: absolute;
 }
 
   
