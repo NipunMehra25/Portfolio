@@ -113,5 +113,6 @@
     link.addEventListener('mousemove', (e) => {
       const rect = link.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
 </body>
 </html>
