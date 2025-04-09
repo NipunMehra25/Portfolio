@@ -112,5 +112,6 @@
   magneticLinks.forEach(link => {
     link.addEventListener('mousemove', (e) => {
       const rect = link.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
 </body>
 </html>
