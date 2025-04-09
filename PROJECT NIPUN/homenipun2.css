@@ -115,7 +115,7 @@ video {
 
 .photo {
     position: absolute; 
-    top: 17vh; 
+    top: 15vh; 
     left: 59vw; 
     height: 70vh;
     width: 35vw;
@@ -137,6 +137,8 @@ video {
     color: #ffffff;
     top: 30vh;
     left: 10vw;
+    pointer-events: none;
+
 }
 
 .text p {
@@ -155,6 +157,47 @@ video {
     height: 10vh;
     cursor: url("starter-northern-lights-pointer.png"), auto;
 }
+
+
+.back-feedback-container {
+    position: absolute;
+    bottom: 1vh;
+    right: 10vw;
+    display: flex;
+    gap: 2vw;
+    z-index: 99;
+    background-color: rgba(0, 0, 0);
+    border: 3px solid #00b3ff;
+    border-radius: 40px;
+    padding: 2vh 2vw;
+    box-shadow: 0 0 25px #00b3ff;
+}
+
+.feedback-btn {
+    color: rgb(230, 224, 224);
+    text-decoration: none;
+    font-size: calc(1vh + .7vw); 
+    padding: 1vh 1vw; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 25px;
+    font-family: fonts;
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+}
+
+.feedback-btn i {
+    font-size: calc(1.5vh + 1vw); 
+}
+
+.feedback-btn:hover {
+    background-color: #00b3ff;
+    color: black;
+    transform: scale(1.1);
+}
+
+
+
 
 .social-media a {
     display: inline-flex; 
