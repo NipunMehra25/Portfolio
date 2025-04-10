@@ -2,12 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url("starter-northern-lights-cursor-modified.png"),auto;
+    cursor: none;
 }
 
-* a{
-    cursor: url("starter-northern-lights-pointer.png"),auto;
-}
+
 
 body{
     display:flex;width:100vw;height:100vh;justify-content:center;align-items: center;background-size: cover;
@@ -183,14 +181,20 @@ video {
     align-items: center;
     justify-content: center;
     font-family: fonts;
+    background:black;
+    border-radius: 17px;
+    border-color: white;
+    stroke: #fff;
+    border-bottom: 2px solid #ffffff33;
 }
 
 .navbar a {
     position: relative; 
     text-decoration: none;
     padding: 20px;
-    font-size: 32px;
+    font-size: 30px;
     color: #ffffff;
+    z-index:1;
 }
 
 .navbar a::after {
@@ -211,9 +215,6 @@ video {
     right: 0;
 }
 
-.navbar a:hover {
-    color: rgba(111,30,224,1);
-}
 
 .name{
     position: absolute;

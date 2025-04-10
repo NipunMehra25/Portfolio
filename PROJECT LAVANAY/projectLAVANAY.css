@@ -395,6 +395,7 @@ video {
 }
 
 .project1:hover, .project2:hover {
-    background: black; /* Or whatever hover color you want */
-    color: rgb(159, 151, 151); /* keep the text color change */
+   /* Or whatever hover color you want */
+   /* keep the text color change */
+   color: white;
 }
