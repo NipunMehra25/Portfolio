@@ -36,12 +36,11 @@
   }
   
   .magnetic-link:hover::before {
-    transform: scale(1);
+    transform: scale(1.2);
     opacity: 1;
     background:#613498;
   }
-  
-  
+ 
   .magnetic-link span {
     position: relative;
     z-index: 2;
@@ -214,23 +213,7 @@ video {
 }
 
 
-.photo {
-    position: absolute;
-    top: 14vh;
-    left: 35vw;
-    height: 64vh;
-    width: 58vw;
-    transition: transform 0.7s ease-in-out;
-}
 
-.photo img {
-    height: 100%;
-    width: 100%;
-}
-
-.photo:hover {
-    transform: scale(1.1);
-}
 
 
 
@@ -368,4 +351,38 @@ video {
     mix-blend-mode: difference;
 }
 
-
+.photo {
+    position: absolute;
+    top: 22vh;
+    right: 15vw;
+    width: 300px;
+    max-width: 80vw;
+    padding: 12px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(111, 30, 224, 0.3), 0 4px 10px rgba(255, 255, 255, 0.1) inset;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s ease;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .photo img {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease;
+  }
+  
+  .photo:hover {
+    transform: scale(1.05) rotate(1.5deg);
+    box-shadow: 0 15px 45px rgba(111, 30, 224, 0.5);
+  }
+  
+  .photo:hover img {
+    transform: scale(1.03);
+  }
+  

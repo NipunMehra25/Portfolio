@@ -27,33 +27,59 @@
             <a href="achivementeffect.html"class="magnetic-link">Achievements</a>
             <a href="edueffect.html"class="magnetic-link">Education</a>
         </div>
-        <div class="about fonts">
-            Who am I ?
-        </div>
-
-        <div class="what fonts">
-            What are my skill's ?
-        </div>
-        <p id="ME">
-            Hello! I’m Lavanay Bhatia, a professional interested in mastering effective communication on LinkedIn and showcasing my skills effectively. I enjoy diving into technical projects, including PYTHON programming and automation with tools like PyAutoGUI. I value precision in coding, preferring structured, exception-free examples to keep scripts clean and straightforward. I have a keen eye for detail in media processing, from ensuring high-quality standards in website  incorporating smooth effects on the web using HTML,CSS & JAVA SCRIPT.
-        </p>
-        <div class="me hover-target">
-            <h1 style="color: rgba(111,30,224,1);">
-                About Me :</h1>
-        </div>
-
-        <div class="skill hover-target" style="color: rgba(111,30,224,1);">
-            Skills :
-        </div>
+      
+        <!-- 💬 About Me Section -->
+<!-- 💬 About Me Section -->
+<div class="about-container">
+  <div class="about-box">
+    <h2 class="about-title">About Me</h2>
+    <p class="about-text">
+      Hello! I’m Lavanay, a passionate front-end developer and creative designer. 
+      I love turning ideas into interactive, responsive, and beautiful digital experiences.
+      Whether it's coding smooth animations or crafting bold UI designs, I enjoy blending tech with creativity.
+    </p>
+  </div>
+</div>
 
 
-        <div class="card card1"></div>
-        <div class="card card2"></div>
-        <div class="card card3"></div>
-        <div class="card card4"></div>
 
-    </div>   
+        <div class="skills-section icon-box magnetic-link-skill">
+          <h2 class="skills-title" style="color: white;">MY SKILLS</h2>
+          <div class="skills-options">
+              <div class="skill-button" id="frontend-btn">FRONT END</div>
+              <div class="skill-button" id="design-btn">DESIGN</div>
+              <div class="skill-button" id="devskills-btn">DEV SKILLS</div>
+              <div class="skill-button" id="core-btn">CORE LANGUAGES</div> <!-- Added Core Languages button -->
+          </div>
+      
+          <!-- FRONT END Skills -->
+          <div class="skills-display" id="frontend-skills">
+              <img src="Untitled design.png" alt="HTML">
+              <img src="Untitled design (1).png" alt="CSS">
+              <img src="javascript-logo.png" alt="JavaScript">
+          </div>
+      
+          <!-- DESIGN Skills -->
+          <div class="skills-display" id="design-skills">
+              <img src="figma.png" alt="Figma">
+              <img src="ae.png" alt="Illustrator">
+          </div>
+      
+          <!-- DEV SKILLS -->
+          <div class="skills-display" id="devskills-skills">
+              <img src="git.png" alt="Git">
+              <img src="github.png" alt="GitHub">
+          </div>
+      
+          <!-- CORE LANGUAGES Skills (Added Section) -->
+          <div class="skills-display" id="core-skills">
+            <img src="c.png" alt="C" />
 
+              <img src="python-png.png" alt="Python" />
+          </div>
+      </div>
+      
+      
     <script>
       // ===== 🎥 Video Hover Play =====
 const video = document.getElementById('hoverVideo');
@@ -124,6 +150,22 @@ magneticLinks.forEach(link => {
     link.style.transform = `translate(0, 0) scale(1)`;
   });
 });
+const magneticLinksSkills = document.querySelectorAll('.magnetic-link-skill');
+
+magneticLinksSkills.forEach(link => {
+  link.addEventListener('mousemove', (e) => {
+    const rect = link.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    // Apply the magnetic effect to skill section links
+    link.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) scale(1.02)`;
+  });
+
+  link.addEventListener('mouseleave', () => {
+    link.style.transform = `translate(0, 0) scale(1)`;
+  });
+});
 
 // ===== ⛔ Hide Trail on Any Anchor Hover =====
 const links = document.querySelectorAll('a');
@@ -134,6 +176,48 @@ links.forEach(link => {
   link.addEventListener('mouseleave', () => {
     trail.style.opacity = '1';
   });
+});
+
+const frontendBtn = document.getElementById('frontend-btn');
+const designBtn = document.getElementById('design-btn');
+const devskillsBtn = document.getElementById('devskills-btn');
+const coreBtn = document.getElementById('core-btn');
+
+const frontendSkills = document.getElementById('frontend-skills');
+const designSkills = document.getElementById('design-skills');
+const devskillsSkills = document.getElementById('devskills-skills');
+const coreSkills = document.getElementById('core-skills');
+
+// Function to hide all sections
+function hideAll() {
+  frontendSkills.style.display = 'none';
+  designSkills.style.display = 'none';
+  devskillsSkills.style.display = 'none';
+  coreSkills.style.display = 'none';
+}
+
+// Show Frontend Skills
+frontendBtn.addEventListener('click', () => {
+  hideAll();
+  frontendSkills.style.display = 'flex';
+});
+
+// Show Design Skills
+designBtn.addEventListener('click', () => {
+  hideAll();
+  designSkills.style.display = 'flex';
+});
+
+// Show Developer Skills
+devskillsBtn.addEventListener('click', () => {
+  hideAll();
+  devskillsSkills.style.display = 'flex';
+});
+
+// Show Core Languages
+coreBtn.addEventListener('click', () => {
+  hideAll();
+  coreSkills.style.display = 'flex';
 });
 
 
