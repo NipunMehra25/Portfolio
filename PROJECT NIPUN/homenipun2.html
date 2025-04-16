@@ -85,7 +85,7 @@
 
         <!-- Buttons for Portfolio Navigation and Feedback -->
         <div class="back-feedback-container">
-            <a href="http://127.0.0.1:5500/FEE%20Project%202/Open%20First/portfolio2.html" class="feedback-btn">
+            <a href="../Open First/portfolio2.html" class="feedback-btn">
                 <i class="ri-user-fill"></i> Portfolios
             </a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVEwyK8oQf-HVjsrX0LUxLbLMRqT76zWsJo4tXwrRBtpMV8g/viewform?usp=header" class="feedback-btn">
@@ -152,7 +152,7 @@
             trailY += dy * 0.7;
 
             const angle = Math.atan2(dy, dx) * 180 / Math.PI;
-            const stretch = Math.min(Math.sqrt(dx * dx + dy * dy) / 30, 0.4);
+            const stretch = Math.min(Math.sqrt(dx * dx + dy * dy) / 30, 0.5);
 
             trail.style.left = `${trailX}px`;
             trail.style.top = `${trailY}px`;
@@ -231,4 +231,3 @@
 </body>
 
 </html>
-
