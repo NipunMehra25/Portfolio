@@ -489,7 +489,7 @@ video {
     border-radius: 50%;
     font-size: calc(2.3vh + 2.2vw);
     color: #00b3ff;
-    transition: transform 0.5s ease;
+    transition: transform 0.1s ease;
 }
 
 @media (max-width: 768px) {
@@ -515,7 +515,13 @@ video {
     border-radius: 100px;
     background-color: #00b3ff;
     box-shadow: 0 0 20px #00b3ff;
-    transition: transform 0.5s ease;
+    transition: transform 0.1s ease;
+}
+
+
+.mail a:hover {
+    background-color: black;
+    transform: scale(1.2);
 }
 
 /* Responsive email button */
@@ -548,10 +554,7 @@ video {
     }
 }
 
-/* Mail hover zoom */
-.mail:hover {
-    transform: scale(1.2);
-}
+
 
 /* Feedback button */
 #feedback {
@@ -654,6 +657,42 @@ video {
     #sp1 {
         display: none;
     }
-
 }
 
+.social-media a:hover {
+    background: black;
+    color: white;
+    mix-blend-mode: difference;
+    border:2px solid white;
+}
+
+
+.mail a:hover {
+    
+    background: black;
+    color: white;
+    border-radius: 90px;
+    transform: scale(1.2);
+}
+
+.mail:hover{
+    background-color: black;
+    border: 2px solid rgb(255, 255, 255);
+    transform: scale(1.2);
+    box-shadow: none;
+}
+
+
+.feedback-btn:hover{
+    color: black;
+    background-color: #ffffff;
+}
+
+
+/* Hide spline on mobile */
+@media (max-width: 768px) {
+    #model {
+        display: none;
+    }
+  }
+  
