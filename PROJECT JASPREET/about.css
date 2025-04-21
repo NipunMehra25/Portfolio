@@ -1,0 +1,97 @@
+.card-container {
+    position: relative; /* changed from absolute to prevent shifting */
+    margin-top: 3vh;
+    padding: 0 5vw;
+    width: 100%;
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: wait_for 2s ease-in-out 0s forwards;
+}
+
+.card {
+    width: 16vw;
+    min-width: 150px;
+    height: 38vh;
+    background: linear-gradient(#00b3ff, #00fff7);
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00b3ff;
+    transition: transform 0.5s ease, background 0.5s ease;
+    font-family: 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+    animation: wait_for 2s ease-in-out 0s forwards;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    background: linear-gradient(#00ccff, #00ffd9);
+    cursor: pointer;
+}
+
+.first-content,
+.second-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    flex-direction: column;
+    color: #fff;
+    font-size: calc(1.8vh + 1vw);
+    font-weight: bold;
+}
+
+.first-content {
+    background: transparent;
+    z-index: 2;
+    opacity: 1;
+}
+
+.card:hover .first-content {
+    opacity: 0;
+    height: 0;
+}
+
+.second-content {
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: scale(0.95);
+    font-size: calc(1.5vh + 0.8vw);
+}
+
+.card:hover .second-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.bar {
+    width: 80%;
+    height: 20px;
+    background-color: #ffffffcc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+}
+
+.fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+/* Progress colors */
+.fill.html { width: 80%; background-color: #e34c26; }
+.fill.css { width: 70%; background-color: #264de4; }
+.fill.js { width: 65%; background-color: #f7df1e; }
+.fill.python { width: 80%; background-color: #00b5fc; }
+.fill.c { width: 75%; background-color: #00d886; }
